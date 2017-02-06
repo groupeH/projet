@@ -10,8 +10,9 @@
 //Ceci est le modèle
 
 namespace App;
+use Illuminate\Database\Eloquent\Model;
 
-class Utilisateur {
+class Utilisateur extends Model{
 
 	public $timestamps = 'false';
     protected $primaryKey = 'idUtilisateur';
