@@ -1,13 +1,15 @@
 <?php
 
+use Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+
 
 class CreateResponsablesTable extends Migration
 {
     /**
      * Run the migrations.
-     *lol
+     *
      * @return void
      */
     public function up()
