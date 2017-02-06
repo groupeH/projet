@@ -8,22 +8,39 @@ class CreateResponsablesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     *lol
      * @return void
      */
     public function up()
     {
-        Schema::create('responsables', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::create('Responsable', function (Blueprint $table) {
+            $table->increments('idResp');
+            $table->string('titreResp', 100);
+            $table->increments('idMembre');
+            $table->increments('idUtilisateur');
+        });
+
+        Schema::table('Responsable', function (Blueprint $table) {
+
+            $table->primary('idResp')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+            $table->primary('idMembre')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+            $table->primary('idUtilisateur')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+
+
         });
     }
-
     /**
      * Reverse the migrations.
      *
      * @return void
      */
+    }
     public function down()
     {
         Schema::dropIfExists('responsables');
