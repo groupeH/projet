@@ -4,11 +4,12 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+
 class CreateResponsablesTable extends Migration
 {
     /**
      * Run the migrations.
-     *lol
+     *
      * @return void
      */
     public function up()
@@ -25,12 +26,10 @@ class CreateResponsablesTable extends Migration
             $table->primary('idResp')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-            $table->primary('idMembre')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            $table->primary('idUtilisateur')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+
+            $table->foreign('id_Membre')->references('idMembre')->on('Membre');
+            $table->foreign('id_Utilisateur')->references('id_Utilisateur')->on('Utilisateur');
+
         });
     }
     /**
