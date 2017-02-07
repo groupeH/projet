@@ -31,8 +31,6 @@ class CreateResponsablesTable extends Migration
             $table->primary('idUtilisateur')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-
-
         });
     }
     /**
