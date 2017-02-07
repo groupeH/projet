@@ -1,6 +1,6 @@
 <?php
 
-use Schema;
+//use Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -38,7 +38,6 @@ class CreateResponsablesTable extends Migration
      *
      * @return void
      */
-    }
     public function down()
     {
         Schema::dropIfExists('responsables');
