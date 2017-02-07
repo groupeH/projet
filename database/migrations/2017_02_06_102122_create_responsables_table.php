@@ -26,12 +26,10 @@ class CreateResponsablesTable extends Migration
             $table->primary('idResp')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-            $table->primary('idMembre')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            $table->primary('idUtilisateur')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+
+            $table->foreign('id_Membre')->references('idMembre')->on('Membre');
+            $table->foreign('id_Utilisateur')->references('id_Utilisateur')->on('Utilisateur');
+
         });
     }
     /**
@@ -39,7 +37,6 @@ class CreateResponsablesTable extends Migration
      *
      * @return void
      */
-    }
     public function down()
     {
         Schema::dropIfExists('responsables');

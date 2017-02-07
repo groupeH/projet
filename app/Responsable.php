@@ -9,7 +9,7 @@ class Responsable extends Model
     public $timestamps = 'false';
     protected $table = 'Responsable';
     protected $primaryKey = 'idResp';
-    protected $fillable = array('titreResp', 'idMembre', 'idUtilisateur');
+    protected $fillable = array('idMembre', 'idUtilisateur', 'titreResp');
 
 
 }
