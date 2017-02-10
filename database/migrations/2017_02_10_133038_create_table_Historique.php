@@ -1,10 +1,10 @@
 <?php
 
-use Schema;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHistoriquesTable extends Migration
+class CreateTableHistorique extends Migration
 {
     /**
      * Run the migrations.
@@ -13,23 +13,20 @@ class CreateHistoriquesTable extends Migration
      */
     public function up()
     {
-        Schema::create('Historique', function (Blueprint $table) {
+        //Création de la table Historique
+        Schema::create('Historique', function(Blueprint $table){
             $table->increments('id_Historique');
             $table->date('dateDebut');
             $table->date('dateFin');
             $table->integer('id_Membre');
             $table->integer('id_Utilisateur');
             $table->integer('id_Cotisation');
-        });
-
-        Schema::table('Historique', function(Blueprint $table){
-            $table->foreign('id_Membre')->references('idMembre')->on('Membre');
-            $table->foreign('id_Utilisateur')->references('id_Utilisateur')->on('Utilisateur');
-            $table->foreign('id_Cotisation')->references('id_Cotisation')->on('Cotisation');
+            
+            $table ->foreign('id_Membre')->references('id_Membre')->on('Membre');
+            $table ->foreign('id_Utilisateur')->references('id_Utilisateur')->on('Utilisateur');
+            $table ->foreign('id_Cotisation')->references('id_Cotisation')->on('CotisationType');
 
         });
-
-
     }
 
     /**
@@ -39,6 +36,8 @@ class CreateHistoriquesTable extends Migration
      */
     public function down()
     {
+        //Suppresion de la table
         Schema::dropIfExists('Historique');
+
     }
 }

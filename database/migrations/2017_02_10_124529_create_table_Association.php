@@ -1,7 +1,6 @@
-
 <?php
 
-use Schema;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
@@ -14,26 +13,21 @@ class CreateTableAssociation extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('Association', function (Blueprint $table) {
-            $table->increments('id_Association');
+        //Création de la table Association
+         Schema::create('Association', function (Blueprint $table) {
+            $table->increments('id_assos');
             $table->string('nomAssos', 300);
             $table->string('mailAssos', 100);
-            $table->integer('telephoneAssos', 100);
+            $table->integer('telephoneAssos',false,true);
             $table->string('description', 100);
             $table->string('pays', 100);
             $table->string('info_suplementaire', 500);
-            $table->increments('id_Adresse');
+            $table->integer('id_Adresse',false,true);
 
-
-        });
-        Schema::table('Association', function(Blueprint $table) {
-            $table->primary('id_Association')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
             $table->foreign('id_Adresse')->references('id_Adresse')->on('Adresse')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
+
         });
     }
 
@@ -44,7 +38,7 @@ class CreateTableAssociation extends Migration
      */
     public function down()
     {
+        //Suppresion de la table
         Schema::dropIfExists('Association');
     }
 }
-
