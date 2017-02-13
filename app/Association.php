@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Association extends Model
 {
 	public $timestamp = 'false';
-    protected $privateKey = "id_Association";
+    protected $privateKey = "id_Assos";
     protected $table = "Association";
-    protected $fillable = array('nomAssos', 'mailAssos', 'telephoneAssos', 'description', 'pays', 'info_suplementaire', 'id_Adresse');
+    protected $fillable = array('nom', 'mail', 'telephone', 'description','id_Adresse');
 }

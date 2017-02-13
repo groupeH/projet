@@ -8,8 +8,8 @@ class Responsable extends Model
 {
     public $timestamps = 'false';
     protected $table = 'Responsable';
-    protected $primaryKey = 'idResp';
-    protected $fillable = array('idMembre', 'idUtilisateur', 'titreResp');
+    protected $primaryKey = array('id_Resp','id_Membre','id_Utilisateur');
+    protected $fillable ='titreResp';
 
 
 }

@@ -8,7 +8,7 @@ class CotisationType extends Model
 {
     public $timestamps = 'false';
     protected $table = 'CotisationType';
-    protected $primaryKey = 'idCotisation';
+    protected $primaryKey = 'id_Cotisation';
     protected $fillable = array('montant', 'nom');
 
 }
