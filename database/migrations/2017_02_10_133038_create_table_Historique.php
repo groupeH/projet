@@ -1,10 +1,7 @@
 <?php
 
-<<<<<<< HEAD:database/migrations/2017_02_10_133038_create_table_Historique.php
+
 use Illuminate\Support\Facades\Schema;
-=======
-//use Schema;
->>>>>>> b0568757da3eefbc9e1ad8e79e36250c5a7bd9a9:database/migrations/2017_02_06_093316_create_historiques_table.php
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
