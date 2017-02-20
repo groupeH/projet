@@ -19,9 +19,9 @@ class CreateTableHistorique extends Migration
             $table->increments('id_Historique');
             $table->date('dateDebut');
             $table->date('dateFin');
-            $table->integer('id_Membre');
-            $table->integer('id_Utilisateur');
-            $table->integer('id_Cotisation');
+            $table->integer('id_Membre',false,true);
+            $table->integer('id_Utilisateur',false,true);
+            $table->integer('id_Cotisation',false,true);
             
             $table ->foreign('id_Membre')->references('id_Membre')->on('Membre');
             $table ->foreign('id_Utilisateur')->references('id_Utilisateur')->on('Utilisateur');
