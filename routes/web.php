@@ -15,3 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/listeMembre', function (){
+    return view('membre.listeMembre');
+});
