@@ -135,7 +135,7 @@ return [
     |
     */
 
-    'providers' => array(
+    'providers' => [
 
         /*
          * Laravel Framework Service Providers...
@@ -177,11 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-<<<<<<< HEAD
     ],
-=======
-    ),
->>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
 
     /*
     |--------------------------------------------------------------------------
