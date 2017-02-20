@@ -15,9 +15,9 @@ use Illuminate\Database\Eloquent\Model;
 class Utilisateur extends Model{
 
 	public $timestamps = 'false';
-    protected $primaryKey = 'idUtilisateur';
+    protected $primaryKey = 'id_Utilisateur';
     protected $table = 'Utilisateur';
-    protected $filliable= array('login','mdp','nomUt','mailUt','portable','civilite','photo','moyenCom','ddn','idAdresse','idAssos');
+    protected $filliable= array('login','mdp','nomUt','mailUt','portable','civilite','photo','moyenCom','ddn','id_Adresse','id_Assos');
 
 
 
