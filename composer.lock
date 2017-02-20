@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "c102a20b70214ea4a6cff2f3ef4430a4",
+=======
+    "content-hash": "98fd77029c776ac8408d72a51fabce90",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -550,6 +554,53 @@
                 "parser"
             ],
             "time": "2016-11-02T15:56:58+00:00"
+        },
+        {
+            "name": "illuminate/html",
+            "version": "v5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/html.git",
+                "reference": "3d1009bb8e0f25720c914af5c1f4015dd373c9ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/html/zipball/3d1009bb8e0f25720c914af5c1f4015dd373c9ef",
+                "reference": "3d1009bb8e0f25720c914af5c1f4015dd373c9ef",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "~5.0",
+                "illuminate/session": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Html\\": ""
+                },
+                "files": [
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "abandoned": "laravelcollective/html",
+            "time": "2015-01-01T16:31:18+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1494,6 +1545,7 @@
         },
         {
             "name": "symfony/console",
+<<<<<<< HEAD
             "version": "v3.2.3",
             "source": {
                 "type": "git",
@@ -1504,6 +1556,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/7a8405a9fc175f87fed8a3c40856b0d866d61936",
                 "reference": "7a8405a9fc175f87fed8a3c40856b0d866d61936",
+=======
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "0e5e6899f82230fcb1153bcaf0e106ffaa44b870"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/0e5e6899f82230fcb1153bcaf0e106ffaa44b870",
+                "reference": "0e5e6899f82230fcb1153bcaf0e106ffaa44b870",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
                 "shasum": ""
             },
             "require": {
@@ -1553,11 +1617,19 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2017-02-06T12:04:21+00:00"
         },
         {
             "name": "symfony/css-selector",
             "version": "v3.2.3",
+=======
+            "time": "2017-02-16T14:07:22+00:00"
+        },
+        {
+            "name": "symfony/css-selector",
+            "version": "v3.2.4",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -1610,6 +1682,7 @@
         },
         {
             "name": "symfony/debug",
+<<<<<<< HEAD
             "version": "v3.2.3",
             "source": {
                 "type": "git",
@@ -1620,6 +1693,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/debug/zipball/b4d9818f127c60ce21ed62c395da7df868dc8477",
                 "reference": "b4d9818f127c60ce21ed62c395da7df868dc8477",
+=======
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/debug.git",
+                "reference": "9b98854cb45bc59d100b7d4cc4cf9e05f21026b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/9b98854cb45bc59d100b7d4cc4cf9e05f21026b9",
+                "reference": "9b98854cb45bc59d100b7d4cc4cf9e05f21026b9",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
                 "shasum": ""
             },
             "require": {
@@ -1663,11 +1748,19 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2017-01-28T02:37:08+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
             "version": "v3.2.3",
+=======
+            "time": "2017-02-16T16:34:18+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v3.2.4",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -1727,7 +1820,11 @@
         },
         {
             "name": "symfony/finder",
+<<<<<<< HEAD
             "version": "v3.2.3",
+=======
+            "version": "v3.2.4",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -1776,6 +1873,7 @@
         },
         {
             "name": "symfony/http-foundation",
+<<<<<<< HEAD
             "version": "v3.2.3",
             "source": {
                 "type": "git",
@@ -1786,6 +1884,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-foundation/zipball/e192b04de44aa1ed0e39d6793f7e06f5e0b672a0",
                 "reference": "e192b04de44aa1ed0e39d6793f7e06f5e0b672a0",
+=======
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-foundation.git",
+                "reference": "a90da6dd679605d88c9803a57a6fc1fb7a19a6e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/a90da6dd679605d88c9803a57a6fc1fb7a19a6e0",
+                "reference": "a90da6dd679605d88c9803a57a6fc1fb7a19a6e0",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
                 "shasum": ""
             },
             "require": {
@@ -1825,6 +1935,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2017-02-02T13:47:35+00:00"
         },
         {
@@ -1839,6 +1950,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/96443239baf674b143604fb87cb27cb01672ab77",
                 "reference": "96443239baf674b143604fb87cb27cb01672ab77",
+=======
+            "time": "2017-02-16T22:46:52+00:00"
+        },
+        {
+            "name": "symfony/http-kernel",
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-kernel.git",
+                "reference": "4cd0d4bc31819095c6ef13573069f621eb321081"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/4cd0d4bc31819095c6ef13573069f621eb321081",
+                "reference": "4cd0d4bc31819095c6ef13573069f621eb321081",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
                 "shasum": ""
             },
             "require": {
@@ -1907,7 +2034,11 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2017-02-06T13:15:19+00:00"
+=======
+            "time": "2017-02-16T23:59:56+00:00"
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1970,6 +2101,7 @@
         },
         {
             "name": "symfony/process",
+<<<<<<< HEAD
             "version": "v3.2.3",
             "source": {
                 "type": "git",
@@ -1980,6 +2112,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/process/zipball/32646a7cf53f3956c76dcb5c82555224ae321858",
                 "reference": "32646a7cf53f3956c76dcb5c82555224ae321858",
+=======
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "0ab87c1e7570b3534a6e51eb4ca8e9f6d7327856"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/0ab87c1e7570b3534a6e51eb4ca8e9f6d7327856",
+                "reference": "0ab87c1e7570b3534a6e51eb4ca8e9f6d7327856",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
                 "shasum": ""
             },
             "require": {
@@ -2015,11 +2159,19 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2017-02-03T12:11:38+00:00"
         },
         {
             "name": "symfony/routing",
             "version": "v3.2.3",
+=======
+            "time": "2017-02-16T14:07:22+00:00"
+        },
+        {
+            "name": "symfony/routing",
+            "version": "v3.2.4",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
@@ -2094,6 +2246,7 @@
         },
         {
             "name": "symfony/translation",
+<<<<<<< HEAD
             "version": "v3.2.3",
             "source": {
                 "type": "git",
@@ -2104,6 +2257,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation/zipball/ca032cc56976d88b85e7386b17020bc6dc95dbc5",
                 "reference": "ca032cc56976d88b85e7386b17020bc6dc95dbc5",
+=======
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation.git",
+                "reference": "d6825c6bb2f1da13f564678f9f236fe8242c0029"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/d6825c6bb2f1da13f564678f9f236fe8242c0029",
+                "reference": "d6825c6bb2f1da13f564678f9f236fe8242c0029",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
                 "shasum": ""
             },
             "require": {
@@ -2154,6 +2319,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2017-01-21T17:06:35+00:00"
         },
         {
@@ -2168,6 +2334,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/var-dumper/zipball/5bb4435a03a4f05c211f4a9a8ee2756965924511",
                 "reference": "5bb4435a03a4f05c211f4a9a8ee2756965924511",
+=======
+            "time": "2017-02-16T22:46:52+00:00"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "cb50260b674ee1c2d4ab49f2395a42e0b4681e20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/cb50260b674ee1c2d4ab49f2395a42e0b4681e20",
+                "reference": "cb50260b674ee1c2d4ab49f2395a42e0b4681e20",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
                 "shasum": ""
             },
             "require": {
@@ -2217,7 +2399,11 @@
                 "debug",
                 "dump"
             ],
+<<<<<<< HEAD
             "time": "2017-01-24T12:58:58+00:00"
+=======
+            "time": "2017-02-16T22:46:52+00:00"
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -3681,6 +3867,7 @@
         },
         {
             "name": "symfony/yaml",
+<<<<<<< HEAD
             "version": "v3.2.3",
             "source": {
                 "type": "git",
@@ -3691,6 +3878,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/e1718c6bf57e1efbb8793ada951584b2ab27775b",
                 "reference": "e1718c6bf57e1efbb8793ada951584b2ab27775b",
+=======
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "9724c684646fcb5387d579b4bfaa63ee0b0c64c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/9724c684646fcb5387d579b4bfaa63ee0b0c64c8",
+                "reference": "9724c684646fcb5387d579b4bfaa63ee0b0c64c8",
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
                 "shasum": ""
             },
             "require": {
@@ -3732,7 +3931,11 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2017-01-21T17:06:35+00:00"
+=======
+            "time": "2017-02-16T22:46:52+00:00"
+>>>>>>> 662090cc9ec9a219a251f197fa724948787af46f
         },
         {
             "name": "webmozart/assert",
