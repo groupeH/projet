@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Responsable extends Model
+class Responsable extends Membre
 {
     public $timestamps = 'false';
     protected $table = 'Responsable';
