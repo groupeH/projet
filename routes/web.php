@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/listeMembre', function (){
     return view('membre.listeMembre');
 });
+
+Route::get('/deposerdoc', 'Documentcontroller@create');
+
+	
