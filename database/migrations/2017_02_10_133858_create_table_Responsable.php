@@ -18,8 +18,8 @@ class CreateTableResponsable extends Migration
         {
             $table->increments('id_Resp');
             $table->string('titreResp');
-            $table->integer('id_Membre');
-            $table->integer('id_Utilisateur');
+            $table->integer('id_Membre',false,true);
+            $table->integer('id_Utilisateur',false,true);
             $table->foreign('id_Membre')->references('id_Membre')->on('Membre');
             $table->foreign('id_Utilisateur')->references('id_Utilisateur')->on('Utilisateur');
         });

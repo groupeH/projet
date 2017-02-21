@@ -12,10 +12,12 @@ body{
     position:fixed;
     margin-top:64px;
 }
+/*
 .side-nav li a{
     text-align: center;
 
 }
+*/
 #navbar{
 
     z-index: 9999999999;
@@ -50,9 +52,9 @@ body{
     text-align: center;
     text-decoration: none;
 
-    -webkit-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.5s;
 
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
     cursor: pointer;
 }
 
@@ -82,3 +84,11 @@ body{
     width: 80%;
     margin-left: 10%;
 }
+
+#liens{
+    margin-right: 5px;
+    text-align: center;
+    margin-left: 55px;
+
+}
+

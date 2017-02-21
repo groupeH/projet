@@ -17,7 +17,7 @@ class CreateTableMembre extends Migration
         Schema::create('Membre', function(Blueprint $table)
         {
             $table->increments('id_Membre');
-            $table->integer('id_Utilisateur');
+            $table->integer('id_Utilisateur',false,true);
             $table->foreign('id_Utilisateur')->references('id_Utilisateur')->on('Utilisateur');
         });
 
