@@ -22,10 +22,10 @@ class CreateTableAssemblee extends Migration
             $table->time('heureFin');
             $table->boolean('assembleePrivee');
             $table->float('coutParticipation');
-            $table->integer('id_Resp');
-            $table->integer('id_Membre');
-            $table->integer('id_Utilisateur');
-            $table->integer('id_Adresse');
+            $table->integer('id_Resp',false,true);
+            $table->integer('id_Membre',false,true);
+            $table->integer('id_Utilisateur',false,true);
+            $table->integer('id_Adresse',false,true);
             $table ->foreign('id_Resp')->references('id_Resp')->on('Responsable');            
             $table ->foreign('id_Membre')->references('id_Membre')->on('Membre');
             $table ->foreign('id_Utilisateur')->references('id_Utilisateur')->on('Utilisateur');

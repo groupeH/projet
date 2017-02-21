@@ -18,7 +18,7 @@ class CreateTableDon extends Migration
             $table->increments('id_Don');
             $table->date('dateDon');
             $table->float('montantDon');
-            $table->integer('id_Utilisateur');
+            $table->integer('id_Utilisateur',false,true);
             $table->foreign('id_Utilisateur')->references('id_Utilisateur')->on('Utilisateur');
         });
     }
