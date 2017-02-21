@@ -1,11 +1,10 @@
 @extends('layouts.layout')
 @section('title','Groupe H')
-@section('nomPage','Liste Membre')
+@section('nomPage','Cotisation')
 
 @section('content')
     <!-- Ici on place le contenu de la page -->
     <div id="row1" class="row">
-        <h4>Veuillez choisir parmis les offres suivantes :</h4>
     <!--<h2>@yield('nomPage')</h2> -->
         <div class="col s12 m4">
             <div class="card blue-grey darken-1">
