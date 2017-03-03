@@ -3,16 +3,46 @@
 @section('nomPage','Déposer un document')
 
 @section('content')
-	<!--<h1>Déposer des documents : </h1>-->
-<!-- <form method="POST" action="C:\wamp\www\projetS4\projet\routes\web.php" enctype="multipart/form-data">	
-     Le contenu du formulaire est à placer ici... 
-     <label name="depotdoc" value="Déposer le document"></label>
-     <input type="file" name="fichierdepot">
-     <input type="submit" name="Mettre en ligne" > -->
-    {{Form::open(array('url' => 'deposerdoc'))}}
-	{{ Form::label('depotdoc', 'Déposer le document : ')}}
-	{{ Form::file('fichierdepot')}}
-	{{ Form::submit('Mettre en ligne')}}
+ <div id="row1" class="row">
+
+        
+        <!--<h2>@yield('nomPage')</h2> -->
+        
+        	<div class="form">
+            	<div class="card blue-grey darken-1" >
+            	<div class="card-content white-text grey darken-2" >
+    {{ Form::open(array('url' => 'deposerdoc', 'files'=>'true', 'method' => 'post'))}}
+	<div id="hautform"><label id="labeldep">Document à déposer : </label>	
+	{{ Form::file('fichierdepot'), array( 'class'=> 'card-content white-text red accent-4')}}<br/><br/></div>
+	
+	<style type="text/css">
+		
+		#labeldep
+		{
+			font-size: large;	
+			text-align: center;
+		}
+		#hautform
+		{
+			text-align: center;
+		}
+	
+	</style>
+	
+
+
+	{{ Form::submit('Mettre en ligne', array('class' => 'waves-effect waves-light btn btn1')) }}
+				
+           
+         
+      
+     
     {{ Form::close()}}
+	
+	
+	</div>
+	</div>
+</div>
+
 
 @endsection
