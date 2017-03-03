@@ -28,4 +28,4 @@ Route::get('/consulterDoc', function(){
 	return view('consulterDoc');
 });
 
-	
+Route::ressource('membre', 'MembreController');
