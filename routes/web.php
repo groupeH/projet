@@ -22,3 +22,7 @@ Route::get('/listeMembre', function (){
 Route::get('/deposerdoc', 'Documentcontroller@create');
 
 Route::ressource('membre', 'MembreController');
+
+Route::get('/inscription', function (){
+    return view('inscription');
+});
