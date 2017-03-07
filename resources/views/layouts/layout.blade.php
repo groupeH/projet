@@ -5,17 +5,16 @@
 
     <!--Including Materialize FrameWork from Google-->
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-
 
     <!-- Icon Materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{ asset('css/materialize.css') }}" type="text/css">
+
+
     <!-- Feuille de style .css -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+
 </head>
 
 
@@ -29,12 +28,12 @@
         <!-- sidebar goes here -->
             <ul class="side-nav fixed grey darken-2" id="sidenav">
                 <li><img id="logo" src="logo_rouge.png"></li>
-                <li><a href="#"><i class="material-icons" id="liens">home</i>Accueil</a></li>
-                <li><a href="#"><i class="material-icons" id="liens">account_circle</i>Membres</a></li>
-                <li><a href="#"><i class="material-icons" id="liens">account_circle</i>Responsable</a></li>
-                <li><a href="#"><i class="material-icons" id="liens">event</i>Evenements</a></li>
-                <li><a href="#"><i class="material-icons" id="liens">message</i>Messages</a></li>
-                <li><a href="#"><i class="material-icons" id="liens">credit_card</i>Cottisation</a></li>
+                <li id="home"><a href="#"><i class="material-icons" id="liens">home</i>Accueil</a></li>
+                <li id="mem"><a href="#"><i class="material-icons" id="liens">account_circle</i>Membres</a></li>
+                <li id="res"><a href="#"><i class="material-icons" id="liens">account_circle</i>Responsable</a></li>
+                <li id="event"><a href="#"><i class="material-icons" id="liens">event</i>Evenements</a></li>
+                <li id="mess"><a href="#"><i class="material-icons" id="liens">message</i>Messages</a></li>
+                <li id="cotti"><a href="#"><i class="material-icons" id="liens">credit_card</i>Cottisation</a></li>
             </ul>
 
         @show
@@ -46,5 +45,17 @@
     </div>
 </div>
 
+<script src="{{ asset('js/jquery-2.1.1.min.js') }}"></script>
+
+<script src="{{ asset('js/materialize.js') }}"></script>
+<script src="{{ asset('js/slider.js') }}"></script>
+<script src="{{ asset('js/toasts.js') }}"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.slider').slider();
+
+    });
+</script>
 </body>
 </html>

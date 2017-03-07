@@ -2,6 +2,8 @@
 @section('title','Groupe H')
 @section('nomPage','Cotisation')
 
+
+
 @section('content')
     <!-- Ici on place le contenu de la page -->
     <div id="row1" class="row">
@@ -47,10 +49,17 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias atque autem cupiditate deleniti deserunt enim explicabo ipsum maxime nobis nostrum odio, officia perspiciatis quae, quisquam reiciendis rem, saepe voluptates.</p>
                 </div>
                 <div class="card-action grey darken-2">
-                    <a class="waves-effect waves-light btn btn1">Donation</a>
+                    <a class="btn btn1">Donation</a>
                 </div>
             </div>
         </div>
 
     </div>
+
+    <script>
+
+        var active = document.getElementById("cotti");
+        active.className += "active";
+
+    </script>
 @endsection
