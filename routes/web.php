@@ -12,12 +12,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/listeMembre', function (){
     return view('membre.listeMembre');
+});
+
+
+Route::get('/login', function (){
+    return view('login');
+});
+
+Route::get('/', function (){
+    return view('Accueil');
 });
 
 Route::get('/deposerdoc', 'Documentcontroller@create');
