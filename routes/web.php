@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,7 @@ Route::get('/listeMembre', function (){
     return view('membre.listeMembre');
 });
 
+
 Route::get('/login', function (){
     return view('login');
 });
@@ -24,3 +26,13 @@ Route::get('/login', function (){
 Route::get('/', function (){
     return view('Accueil');
 });
+
+Route::get('/deposerdoc', 'Documentcontroller@create');
+Route::post('/deposerdoc', 'Documentcontroller@store');
+
+
+Route::get('/consulterDoc', function(){
+	return view('consulterDoc');
+});
+
+Route::ressource('membre', 'MembreController');
