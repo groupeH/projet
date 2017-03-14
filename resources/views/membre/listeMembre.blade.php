@@ -11,7 +11,7 @@
         <div class="col s12 m4">
             <div class="card blue-grey darken-1">
                 <div id="crd" class="card-content white-text red accent-4">
-                    <span class="card-title card1 card2">Cotisation Membre</span>
+                    <span class="card-title card1 card2">Membre</span>
                     <span class="card-title card1">5$/an</span>
 
                 </div>
