@@ -27,6 +27,7 @@ class CreateTableUtilisateur extends Migration
             $table ->string('moyenCommunication',100);
             $table ->date('ddn');
             $table ->date('dateInscription');
+            $table -> string('remember_token', 100) -> nullable();
             $table ->integer('id_Adresse',false,true);
             $table ->integer('id_Assos',false,true);
             $table ->foreign('id_Adresse')->references('id_Adresse')->on('Adresse');

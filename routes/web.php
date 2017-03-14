@@ -19,13 +19,10 @@ Route::get('/listeMembre', function (){
 });
 
 
-Route::get('/login', function (){
-    return view('login');
-});
-
 Route::get('/', function (){
     return view('Accueil');
 });
+
 
 Route::get('/deposerdoc', 'Documentcontroller@create');
 Route::post('/deposerdoc', 'Documentcontroller@store');
@@ -35,8 +32,13 @@ Route::get('/consulterDoc', function(){
 	return view('consulterDoc');
 });
 
-Route::ressource('membre', 'MembreController');
+Route::resource('membre', 'MembreController');
 
 Route::get('/inscription', function (){
     return view('inscription');
 });
+
+Auth::routes();
+
+
+Route::get('/home', 'HomeController@Accueil');
