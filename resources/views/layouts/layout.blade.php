@@ -31,7 +31,7 @@
                 <li><img id="logo" src="logo_rouge.png"></li>
                 <li><a href="#"><i class="material-icons" id="liens">home</i>Accueil</a></li>
                 <li><a href="#"><i class="material-icons" id="liens">account_circle</i>Membres</a></li>
-                <li><a href="#"><i class="material-icons" id="liens">account_circle</i>Responsable</a></li>
+                <li><a href="{{route('liste_responsables')}}"><i class="material-icons" id="liens">account_circle</i>Responsable</a></li>
                 <li><a href="#"><i class="material-icons" id="liens">event</i>Evenements</a></li>
                 <li><a href="#"><i class="material-icons" id="liens">message</i>Messages</a></li>
                 <li><a href="#"><i class="material-icons" id="liens">credit_card</i>Cottisation</a></li>
