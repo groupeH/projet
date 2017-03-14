@@ -1,15 +1,51 @@
 @extends('layouts.layout2')
 @section('title','Groupe H')
 @section('nomPage','Inscription')
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
 @section('content1')
-    <div class="row">
-        <form class="col s12">
+
+    <div class="form">
+        <div class="card blue-grey darken-1" >
+            <div class="card-content white-text grey darken-2" >
+                <div id="hautform"><label id="labeldep">Inscription </label>
+                {!! Form::open(['url' => 'utilisateurs']) !!}
+
+                {!! Form::label('nom', 'Nom') !!}
+                {!! Form::text('nom') !!}
+
+                {!! Form::label('prenom', 'Prénom') !!}
+                {!! Form::text('prenom') !!}
+
+                {!! Form::label('email', 'Email') !!}
+                {!! Form::email('email') !!}
+
+                {!! Form::label('portable', 'Portable') !!}
+                {!! Form::text('portable') !!}
+
+                {!! Form::label('civilite', 'Civilite') !!}
+                {!! Form::radio('Madame', 'Monsieur')
+
+                {!! Form::label('password', 'Mot de passe') !!}
+                {!! Form::password('password') !!}
+
+                {!! Form::label('password', 'Confirmer le mot de passe') !!}
+                {!! Form::password('password') !!}
+
+                {{ Form::submit('Inscription', array('class' => 'waves-effect waves-light btn btn1')) }}
+
+
+
+                @endsection
+                @section('content2')
+
+                    {!! Form::label('nom', 'Nom') !!}
+                    {!! Form::text('nom') !!}
+
+
+                    {!! Form::close() !!}
+                @endsection
+<!-- <div class="row">
+        <form class="col s12" method="POST" action="{{route('inscription')}}">
             <div class="row">
                 <div >
                     <p>Responsable du site</p>
@@ -45,11 +81,9 @@
                 </div>
             </div>
         </form>
-    </div>
-@endsection
+    </div>-->
 
-@section('content2')
-    <div class="row">
+   <!-- <div class="row">
         <form class="col s12">
             <div class="row">
                 <div >
@@ -83,5 +117,4 @@
                 </div>
             </div>
         </form>
-    </div>
-@endsection
+    </div>-->

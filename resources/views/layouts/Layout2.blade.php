@@ -3,16 +3,15 @@
 <head >
     <title>Projet - @yield('title')</title>
 
+
     <!--Including Materialize FrameWork from Google-->
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-
 
     <!-- Icon Materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('css/materialize.css') }}" type="text/css">
+
 
     <!-- Feuille de style .css -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
@@ -37,6 +36,10 @@
 
     </div>
 </div>
+<script src="{{ asset('js/jquery-2.1.1.min.js') }}"></script>
 
+<script src="{{ asset('js/materialize.js') }}"></script>
+<script src="{{ asset('js/slider.js') }}"></script>
+<script src="{{ asset('js/toasts.js') }}"></script>
 </body>
 </html>

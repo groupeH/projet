@@ -36,9 +36,16 @@ Route::resource('membre', 'MembreController');
 
 Route::get('/inscription', function (){
     return view('inscription');
+
 });
 
 Auth::routes();
 
 
 Route::get('/home', 'HomeController@Accueil');
+/*=======
+
+})->name('inscription');
+
+Route::get('/inscription', 'UtilisateurController@create');
+>>>>>>> Stashed changes*/

@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers\Auth;
 
+<<<<<<< Updated upstream
+=======
+use App\Utilisateur;
+>>>>>>> Stashed changes
 use App\Http\Controllers\Controller;
 use App\Utilisateur;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use DB;
 
 class RegisterController extends Controller
 {
@@ -42,30 +48,68 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'nomUt' => 'required|max:255',
+            'mailUt' => 'required|email|max:255|unique:users',
+            'mdp' => 'required|min:6|confirmed',
         ]);
     }
 
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
-     * @return User
+     * @param  array $data
+     * @return Utilisateur
+
+     *
      */
-    protected function create(array $data)
+    public function create()
     {
+<<<<<<< Updated upstream
         return Utilisateur::create([
             'login' => $data['name'],
             'mailUtilisateur' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+=======
+        //$utilisateur = DB::insert('insert into utilisateurs(id, name) values (?,?)');
+        return view('inscription');
     }
+
+
+    public function insert()
+    {
+        $utilisateurs = New Utilisateur;
+        $utilisateurs->('nom');
+        $utilisateurs->('prenom');
+        $utilisateurs->('mail');
+        $utilisateurs->('mdp');
+
+        $utilisateurs->save();
+>>>>>>> Stashed changes
+    }
+
+    /*
+
+     public function store(Request $request)
+    {
+
+        $utilisateur->nomUt = $request->nomUt;
+        $utilisateur->login = $request->login;
+
+       /* $this->validate($request,[
+            'nomUt' => 'required',
+            'login' => 'required',
+            'mailUt' => 'required',
+            'portable' => 'required',
+            'civilite' => 'required',
+            'ddn' => 'required',
+            'mdp' => 'required',]);
+
+    }*/
 }

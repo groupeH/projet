@@ -12,8 +12,8 @@
             	<div class="card blue-grey darken-1" >
             	<div class="card-content white-text grey darken-2" >
     {{ Form::open(array('url' => 'deposerdoc', 'files'=>'true', 'method' => 'post'))}}
-	<div id="hautform"><label id="labeldep">Document à déposer : </label>	
-	{{ Form::file('fichierdepot'), array( 'class'=> 'card-content white-text red accent-4')}}<br/><br/></div>
+	<div id="hautform"><label id="labeldep">Document à déposer : </label>
+			{{ Form::file('fichierdepot'), array( 'class'=> 'card-content white-text red accent-4')}}<br/><br/></div>
 	
 	<style type="text/css">
 		
