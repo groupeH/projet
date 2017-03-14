@@ -33,6 +33,7 @@ Route::get('/consulterDoc', function(){
 });
 
 Route::resource('membre', 'MembreController');
+<<<<<<< HEAD
 
 Auth::routes();
 
@@ -40,3 +41,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@Accueil');
 
 
+=======
+>>>>>>> d43588766ced181143a6ab5dcacd16f6fe9aae55
