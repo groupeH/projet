@@ -35,9 +35,14 @@ Route::get('/consulterDoc', function(){
 Route::resource('membre', 'MembreController');
 
 
+Route::get('/inscription', function (){
+    return view('inscription');
+
+});
+
+
 Auth::routes();
 
 
 Route::get('/home', 'HomeController@Accueil');
-
 

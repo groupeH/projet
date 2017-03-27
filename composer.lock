@@ -1,10 +1,14 @@
-    {
+{
+
+{
     "_readme": [
         "This file locks the dependencies of your project to a known state",
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "5dcb205ea96b1b336623ab92d8f80679",
+
+    "content-hash": "c102a20b70214ea4a6cff2f3ef4430a4",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -552,6 +556,7 @@
             "time": "2016-11-02T15:56:58+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "illuminate/html",
             "version": "v5.0.0",
             "source": {
@@ -599,6 +604,8 @@
             "time": "2015-01-01T16:31:18+00:00"
         },
         {
+=======
+>>>>>>> c89c7a9dd0af5928120a2ba8044865608e331ede
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
