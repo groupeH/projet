@@ -24,7 +24,7 @@ class LoginController extends Controller
 
 
     public function redirectTo(){
-        return view('Accueil');
+        return '/home';
     }
 
 
@@ -45,6 +45,7 @@ class LoginController extends Controller
         return 'mailUtilisateur';
     }
 
+
     public function logout(Request $request)
     {
         $this->guard()->logout();
@@ -55,5 +56,6 @@ class LoginController extends Controller
 
         return redirect('/home');
     }
+
 
 }
