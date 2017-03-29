@@ -3,17 +3,6 @@
 @section('nomPage','Projet Web - S4')
 
 
-@section('sidebar')
-
-    <ul class="side-nav fixed grey darken-2" id="sidenav">
-        <li><img id="logo" src="logo_rouge.png"></li>
-        <p style="text-align: center">Veuillez vous connecter pour acceder aux fonctionnalitées : </p>
-        <li id="connexion"><a href="{{ route('login') }}"><i class="material-icons" id="liens">home</i>Connexion</a></li>
-        <li id="connexion"><a href="{{ route('register') }}"><i class="material-icons" id="liens">home</i>Creer un compte</a></li>
-
-    </ul>
-@endsection
-
 @section('content')
 
         <h4>Ce que nous proponsons</h4>
