@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('title','Groupe H')
-@section('nomPage','Payement')
+@section('nomPage','Paiement')
 
 @section('content')
 

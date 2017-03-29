@@ -16,11 +16,11 @@ class TableParticipant extends Migration
         //
         Schema::create('Participant', function(Blueprint $table){
             $table->increments('id_Participant');
-            $table->integer('id_Membre');
-            $table->integer('id_Asmb');
-            $table ->foreign('id_Membre')->references('id_Membre')->on('Membre');
-            $table ->foreign('id_Asmb')->references('id_Asmb')->on('Assemblee');
-            $table ->timestamps();
+            $table->integer('id_Membre')->unsigned();
+            $table->integer('id_Asmb')->unsigned();
+            $table->foreign('id_Membre')->references('id_Membre')->on('Membre');
+            $table->foreign('id_Asmb')->references('id_Asmb')->on('Assemblee');
+            $table->timestamps();
 
         });
     }
