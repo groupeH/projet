@@ -18,6 +18,25 @@ Route::get('/listeMembre', function (){
     return view('membre.listeMembre');
 });
 
+Route::get('/membre.pouvoirCotiser', function (){
+    return view('membre.pouvoirCotiser');
+});
+
+Route::resource('cotisation','paiementController');
+Route::get('membre.pouvoirCotise', 'paiementController@create')->name('createCotisation');
+Route::get('membre.pouvoirCotiser', 'paiementController@index')->name('indexCotisation');
+//Route::post('membre.pouvoirCotiser','paiementController@store')->name('storeCotisation');
+
+Route::get('/membre.donnerDons', function (){
+    return view('membre.donnerDons');
+});
+Route::post('membre.pouvoirCotiser','paiementController@index');
+Route::get('membre.donnerUnDons', 'donsController@create')->name('createDon');
+Route::post('/membre.donnerDons','donsController@store')->name('createStore');
+Route::get('/membre.donnerDons', 'donsController@index')->name('indexDon');
+
+
+
 
 Route::get('/', function (){
     return view('Accueil');
@@ -33,13 +52,6 @@ Route::get('/consulterDoc', function(){
 });
 
 Route::resource('membre', 'MembreController');
-
-
-Route::get('/inscription', function (){
-    return view('inscription');
-
-});
-
 
 Auth::routes();
 
