@@ -66,9 +66,14 @@ return [
 
     'providers' => [
         'users' => [
+            'driver' => 'eloquent',
+            'table' => 'Utilisateur',
+            'model' => App\Utilisateur::class,
+/*=======
             'driver' => 'database',
-            //'table' => 'Utilisateur',
+            'table' => 'Users',
             'model' => App\User::class,
+>>>>>>> Stashed changes*/
         ],
 
         // 'users' => [

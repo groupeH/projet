@@ -1,27 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use App\Utilisateur;
-use App\Http\Controllers\Controller;
-use DB;
 
-class UtilisateurController extends Controller
+use Illuminate\Http\Request;
+use App\Don;
+
+class donsController extends Controller
 {
-    //
-     /**
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-    //retourne la liste des utilisateurs
     public function index()
     {
-
-        $utilisateurs= Utilisateur::all()->sortBy("nomUtilisateur");
-       // dd($utilisateurs) ;
-        return view('responsable/liste_Utilisateurs', compact('utilisateurs'));
+        return view("/membre.donnerDons");
     }
 
     /**
@@ -31,17 +25,8 @@ class UtilisateurController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
-        //
-=======
-        /*$utilisateurs = New Utilisateur;
-        $utilisateurs=>('nomUt');
-        $utilisateurs->('prenom');
-        $utilisateurs->('mail');
-        $utilisateurs->('mdp');
+        return view("/membre.donnerDons");
 
-        $utilisateurs->save();*/
->>>>>>> f7c329261272a5238d08fcb593ee7a0da82876dd
     }
 
     /**
@@ -52,7 +37,22 @@ class UtilisateurController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'nomTitulaire'=>'required',
+            'numCarte'=>'required|size:16',
+            'dateCarte'=>'required|date',
+            'crypto'=> 'required|size:3',
+            'montantDon'=>'required',
+        ]);
+
+        $don = new Don();
+        $don->id_Don=('3');
+        $don->dateDon=('23/12/18');
+        $don->montantDon=$request->input('montantDon');
+        $don->id_Utilisateur=('1');
+        $don->save();
+
+        return redirect()->route('indexDon')->with('message','Paiement accepté');
     }
 
     /**
@@ -61,13 +61,9 @@ class UtilisateurController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
-    //Retourne la vue des détails d'un utilisateur
-    public function show(Utilisateur $utilisateur)
+    public function show()
     {
-        //
-        return view('responsable/details_Utilisateur', compact('utilisateur'));
-
+        return view("/membre.donnerDons");
     }
 
     /**
@@ -101,6 +97,10 @@ class UtilisateurController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+
+
     }
+
 }
+

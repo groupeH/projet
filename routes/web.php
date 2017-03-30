@@ -17,9 +17,17 @@ use Illuminate\Http\Request;
 Route::get('/listeMembre', function (){
     return view('membre.listeMembre');
 });
+/*
+Route::get('/membre.pouvoirCotiser', function (){
+    return view('membre.pouvoirCotiser');
+});
 
+Route::resource('cotisation','paiementController');
+Route::get('membre.pouvoirCotise', 'paiementController@create')->name('createCotisation');
+Route::get('membre.pouvoirCotiser', 'paiementController@index')->name('indexCotisation');
+//Route::post('membre.pouvoirCotiser','paiementController@store')->name('storeCotisation');
 
-
+*/
 //Permet d'accèder à la liste des utlisateurs	
 Route::get('utilisateurs','UtilisateurController@index')->name('liste_utilisateurs');
 
@@ -44,11 +52,22 @@ Route::get('membres','MembreController@index')->name('liste_membres');
 
 Route::get('/login', function (){
     return view('login');
+});/*
+Route::get('/membre.donnerDons', function (){
+    return view('membre.donnerDons');
 });
+Route::post('membre.pouvoirCotiser','paiementController@index');
+Route::get('membre.donnerUnDons', 'donsController@create')->name('createDon');
+Route::post('/membre.donnerDons','donsController@store')->name('createStore');
+Route::get('/membre.donnerDons', 'donsController@index')->name('indexDon');
+
+*/
+
 
 Route::get('/', function (){
     return view('Accueil');
 });
+
 
 Route::get('/deposerdoc', 'Documentcontroller@create');
 Route::post('/deposerdoc', 'Documentcontroller@store');
@@ -56,11 +75,12 @@ Route::post('/deposerdoc', 'Documentcontroller@store');
 Route::get('/login', function (){
     return view('login');
 });
-
+/*
 Route::get('/Accueil', function (){
     return view('Accueil');
 });
-
+*/
+/*
 
 //Route renvoyant la page deposerDoc au moment de la création de la page.
 Route::get('/deposerdoc', 'Documentcontroller@create');
@@ -84,11 +104,16 @@ Route::get('/consulterDoc', function(){
 });
 
 Route::resource('membre', 'MembreController');
-
+*/
+/*
 // Accès page liste assemblées côté membre
 Route::get('/listeAssemblee', 'AssembleeController@indexMembre');
 // Route afin d'ajouter la participation du membre à une assemblée
 Route::post('/listeAssemblee/participer', 'ParticipantController@ajouter');
 // Route afin de supprimer la participation du membre à une assemblée
-Route::post('/listeAssemblee/desinscrire', 'ParticipantController@supprimer');
+Route::post('/listeAssemblee/desinscrire', 'ParticipantController@supprimer');*/
+Auth::routes();
+
+
+Route::get('/home', 'HomeController@Accueil');
 
