@@ -6,14 +6,14 @@
 	@if(Session::has('message'))
     <div class="alert alert-success">
         {{ Session::get('message') }}
+
     </div>
     @endif
 	<div class="row">
 		<div class="col s12 m7">
 			<div class="card card3">
 				<div class="card-image ">
-				<img id="logo" src="logo_rouge.png">
-					<img src="logo_rouge.png">
+				<img  src="https://s-media-cache-ak0.pinimg.com/originals/99/1f/18/991f18ba5bbd5970f0dcf847b88fd141.jpg">
 				</div>
 				<div class="card-content">
 					<table>
@@ -56,7 +56,7 @@
 							</tr>
 							
 							
-							@if(strcmp ("Administrateur",$resp->titreResp)==0)
+							@if(strcmp ("Administrateur", Session::get('titreResp'))==0)
 							<td><a class="btn btn1 waves-effect waves-light" href="{{route('modif_responsable',$resp->id_Resp)}}"><i class="material-icons">edit</i></a></td>
 							
 							<td class="center">

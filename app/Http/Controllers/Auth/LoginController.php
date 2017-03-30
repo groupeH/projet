@@ -39,13 +39,18 @@ class LoginController extends Controller
 
         if(count($resp)){
             session(['id_Membre' => $resp->id_Membre]);
-            session(['id_Resp' => $resp->id_Resp]);
+            session(['id_Responsable' => $resp->id_Resp]);
             session(['titreResp' => $resp->titreResp]);
+            session(['id_Utilisateur' => Auth::user()->id_Utilisateur]);
 
         }else{
             $resp1 = DB::table('Membre')->select('id_Membre')->where('id_Utilisateur', $id)->get()->first();
-            if(count($resp1))
-                session(['id_Membre' => $resp->id_Membre]);
+            if(count($resp1)) {
+                session(['id_Utilisateur' => Auth::user()->id_Utilisateur]);
+                session(['id_Membre' => $resp1->id_Membre]);
+            }
+            else
+                session(['id_Utilisateur' => Auth::user()->id_Utilisateur]);
         }
 
     }

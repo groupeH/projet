@@ -18,6 +18,10 @@ Route::get('/listeMembre', function (){
     return view('membre.listeMembre');
 });
 /*
+Route::get('/cotiser', function (){
+    return view('cotisation');
+})->name('cotiser');
+
 Route::get('/membre.pouvoirCotiser', function (){
     return view('membre.pouvoirCotiser');
 });
@@ -115,5 +119,10 @@ Route::post('/listeAssemblee/desinscrire', 'ParticipantController@supprimer');*/
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@Accueil');
+Route::get('/home', 'HomeController@Accueil')->name('accueil');
 
+Route::get('/listeAssemblee', 'AssembleeController@indexMembre')->name('listeAssembleesMembre');
+
+Route::post('/listeAssemblee/participer', 'ParticipantController@ajouter');
+
+Route::post('/listeAssemblee/desinscrire', 'ParticipantController@supprimer');

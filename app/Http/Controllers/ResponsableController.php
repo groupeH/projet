@@ -96,16 +96,13 @@ class ResponsableController extends Controller
         $rules =array('titre'=>'required');
         $validator = Validator::make(Input::all(), $rules);
 
-        if($validator->fails()){
-         return "titre non saisie";
-
-        }else {
-            $responsable= Responsable::find($id);
+        
+        $responsable= Responsable::find($id);
         $responsable->titreResp = Input::get('titre');
         $responsable->save();
 
          return redirect()->route('liste_responsables')->with('message','Responsable mis à jour !');
-        }
+        
         
 
     }

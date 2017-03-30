@@ -5,10 +5,17 @@
 @section('content')
 
 @if(Session::has('message'))
-Materialize.toast({{Session::get('message')}}, 4000)
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<span value={{Session::get('message')}}></span>
+<script>
+	$(document).ready(function(){
+		Materialize.toast("{{Session::get('message')}}", 4000);
+	});
+</script>
 	
 @endif
-  <table class="highlight">
+<div class="container">
+	<table class="highlight">
         <thead>
           <tr>
               <th data-field="civilite">H/F</th>
@@ -35,6 +42,8 @@ Materialize.toast({{Session::get('message')}}, 4000)
 </table>
 <td><a class="btn btn1 waves-effect waves-light right" href="{{route('liste_membres')}}"><i class="material-icons">note add</i></a></td>
 
+</div>
+  
 		
 @endsection
 

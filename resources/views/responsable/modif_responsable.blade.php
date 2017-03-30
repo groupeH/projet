@@ -9,52 +9,32 @@
 <div class="form-group">
 {!! Form::model($responsable,array('route' => ['update_responsable', $responsable->id_Resp],'method'=>'PUT')) !!}
     {!! Form::label('title', 'Nouveau titre ', ['class' => 'control-label']) !!}
-    {!! Form::text('titre', null, ['class' => 'form-control']) !!}
-</div>
+    {!! Form::text('titre', null, ['class' => 'form-control', 'id' => 'titre']) !!}
 
 
-{!! Form::submit('Enregistrer', ['class' => 'btn btn1 waves-effect waves-light']) !!}
+{!! Form::submit('Enregistrer', ['class' => 'btn btn1 waves-effect waves-light', 'id' => 'btnForm']) !!}
 
 {!! Form::close() !!}
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			//var $titre = $('#titre');
-			var	$btn = $('.btn btn1 waves-effect waves-light');
+			var	$btn = $('#btnForm');
 
 			$btn.click(function(e){
-		        e.preventDefault(); // on annule la fonction par défaut du bouton d'envoi
-
-		        // puis on lance la fonction de vérification sur tous les champs :
-		        //verifier($titre);
-		        var $titre = $('#titre');
+				var $titre = $('#titre');
+		        //on lance la fonction de vérification sur le champ de texte :
 		        if($titre.val() == ""){ // si le champ est vide
-			        	$btn.prop('disabled', true);
-			            $titre.css({ // on rend le champ rouge
-			    	        borderColor : 'red',
-			    	        color : 'red'
-			    	    });
-			        }
-			        else {
-			        	$btn.prop('disabled', false);
-
-			        }
+		        	// on annule la fonction par défaut du bouton d'envoi
+		        	e.preventDefault();
+			       	Materialize.toast('Titre non saisi', 4000);
+			           $titre.css({ // on rend le champ rouge
+			            borderColor : 'red',
+			            color : 'red'
+			        });
+			    }
 		    });
-			/* function verifier(champ){
-			        if(champ.val() == ""){ // si le champ est vide
-			        	$btn.prop('disabled', true);
-			            champ.css({ // on rend le champ rouge
-			    	        borderColor : 'red',
-			    	        color : 'red'
-			    	    });
-			        }
-			        else {
-			        	$btn.prop('disabled', false);
-
-			        }
-			    } */
-
 		});
 	</script>
 

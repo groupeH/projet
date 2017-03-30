@@ -1,18 +1,7 @@
 h2{
     text-align: center;
 }
-.material-icons{
-    margin-right: 0;
-}
 
-
-
-#iconlarge{
-    color: black;
-
-    font-size: 150px;
-    margin-left: 30%;
-}
 
 
 body{
@@ -143,4 +132,8 @@ li .active{
 /* icon prefix focus color */
 .input-field .prefix.active {
     color: #000;
+}
+
+#login{
+    margin-top: 10%
 }
